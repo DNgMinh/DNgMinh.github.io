@@ -1,26 +1,28 @@
-# Hosting Your Resume on GitHub Pages Using Pelican
+# Hosting Your Markdown File on GitHub Pages Using Pelican
 
 ## Purpose
-This README provides instructions on how to take your Markdown resume, add the necessary metadata, and host it on GitHub Pages using Pelican. This guide is aimed at Marvin McLaren, the Foomatic finance manager from Assignment 1, who is familiar with Markdown but needs help setting up a static website using Pelican and GitHub Pages.
+This README provides instructions on how to take your Markdown file (e.g., your resume) and host it on GitHub Pages using Pelican. I've successfully hosted my resume on [my GitHub Page](https://dngminh.github.io/), and you can view the source code at [my GitHub repository](https://github.com/DNgMinh/DNgMinh.github.io).
 
 ## Prerequisites
-Before you can host your resume, make sure you have the following resources ready:
-
-1. **Git** – A version control system to track your changes and upload to GitHub.
-2. **Python** – Pelican is a Python-based static site generator.
-3. **Pelican** – A tool to generate static HTML files from your Markdown resume.
-4. **GitHub Account** – A platform to host your resume on GitHub Pages.
-5. **Basic Command Line Knowledge** – Ability to run commands like `git` and `python` from the terminal.
-
-If you don’t already have these installed, follow these installation guides:
-- [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [Install Python](https://www.python.org/downloads/)
-- [Install Pelican](https://docs.getpelican.com/en/latest/)
+Before you can host your resume, make sure you have the following resources ready. For Git and Python, follow the installation guides on the official websites.
+1. **Git** - A version control system to track your changes and upload to GitHub. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. **Python** - Pelican is a Python-based static site generator. [Install Python](https://www.python.org/downloads/)
+3. **Pelican** - A tool to generate static HTML files from your Markdown resume.  
+   To install Pelican, run the following command in your terminal:
+    ```bash
+    pip install pelican
+    ```
+4. **ghp-import** - A tool that helps push your generated HTML files to GitHub Pages.  
+   To install ghp-import, run the following command in your terminal:
+    ```bash
+    pip install ghp-import
+    ```
+5. **GitHub Account** - A platform to host your static website.
 
 ## Instructions
 
-### 1. Set Up Your GitHub Repository
-**Principle from Etter’s Modern Technical Writing**: **Clarity and Simplicity** – Keep the process straightforward and avoid overwhelming the user with unnecessary details.
+### 1. Set Up Your GitHub Repository 
+*(Etter’s Principle: Help Others Write (Chapter 2.7). Etter emphasizes the importance of making it easy for others to contribute to documentation. By hosting your project on GitHub and using Git for version control, you create a collaborative environment where other people like me can view and contribute to your project)*
 
 - **Create a GitHub Repository**:
     - Go to [GitHub](https://github.com/).
@@ -30,124 +32,170 @@ If you don’t already have these installed, follow these installation guides:
     - Click **Create Repository**.
 
 - **Clone the Repository Locally**:
-    Open your terminal and clone the repository using the following command:
+    Open your terminal, navigate (`cd`) to your desired directory, and clone the repository using the following command:
 
     ```bash
     git clone https://github.com/your-username/your-username.github.io.git
     ```
+    Replace `your-username` with your actual GitHub username.   
 
-    Replace `your-username` with your actual GitHub username.
 
 ### 2. Use `pelican-quickstart` to Create Your Pelican Site
-**Principle from Etter’s Modern Technical Writing**: **Efficiency** – Automate the process to minimize errors and simplify setup.
+*(Etter’s Principle: Make Static Websites (Chapter 3.4). Etter advocates for static websites because they are fast, secure, and portable. Although you could manually create a simple static website, he recommends using a static site generator like Pelican)*
 
-Instead of manually setting up the Pelican configuration and file structure, we can use `pelican-quickstart` to create the necessary files for you:
+In your terminal, `cd` to the directory you just cloned from the GitHub repository (we'll call this your **_project directory_**), then run the following command:
 
-- In your terminal, navigate to the directory where you want to create the Pelican site and run the following command:
-
-    ```bash
-    pelican-quickstart
-    ```
-
-- This will ask you a few questions to set up the project. Here are the key options you should choose:
-    - **Your name**: Enter your name.
-    - **Your site’s title**: Enter the title of your site (e.g., “John Doe’s Resume”).
-    - **Where do you want to create your content (path)?**: Just hit **Enter** to accept the default (`./content`).
-    - **What will the URL of your site be?**: Set this to `https://your-username.github.io/`.
-    - **Do you want to generate a Makefile/Makefile for you?**: Choose **Yes** for convenience.
-    - **Do you want to enable Pelican plugins?**: Choose **No** (unless you need plugins).
-    - **Do you want to use the default theme?**: Choose **Yes**.
-
-This will create the necessary folder structure and configuration files for your Pelican site.
-
-### 3. Add Metadata to Your Markdown Resume
-**Principle from Etter’s Modern Technical Writing**: **Precision** – Provide exactly what needs to be done, including the exact metadata structure to be added.
-
-Now that the site structure is set up, you’ll need to add metadata to your `.md` resume file for Pelican to process it correctly. In the `content` directory, create a Markdown file (e.g., `resume.md`) and add the following metadata at the top:
-
-```markdown
-Title: John Doe's Resume
-Date: 2025-03-06
-Slug: resume
-Category: pages
-Summary: A professional finance manager with 5+ years of experience.
-
-# John Doe
-
-## Summary
-A detail-oriented finance manager with 5+ years of experience in budgeting, forecasting, and financial analysis.
-
-## Skills
-- Budgeting & Forecasting
-- Financial Modeling
-- Data Analysis
-
-## Experience
-### Finance Manager | Foomatic
-*January 2020 – Present*
-- Managed budgets for multiple departments.
-- Led financial reporting and analysis for senior management.
-
-## Education
-- **Bachelor's Degree in Finance**, Example University
+```bash
+pelican-quickstart
 ```
 
-Here’s what each field means:
-- **Title**: The title of your page.
-- **Date**: The date your page was created or last modified.
-- **Slug**: The URL path for your page (e.g., `/resume/`).
-- **Category**: Assign this as `pages` to ensure it’s treated as a standalone page (not a blog post).
-- **Summary**: A brief description of the page (optional, but useful for SEO).
+This will ask you a few questions to set up the project. Here are some important questions:
+- **Where do you want to create your new web site? [.]**: Press Enter to use this directory.
+- **What will be the title of this web site?**: Enter the title of your site (e.g., “Marvin McLare’s Resume”).
+- **Who will be the author of this web site?**: Enter your name.
+- **Do you want to specify a URL prefix?**: Choose **No (n)**.
+- **Do you want to generate a tasks.py/Makefile to automate generation and publishing?**: Choose **Yes (y)** for convenience.
+- **Do you want to upload your website using GitHub Pages?**: Choose **Yes**.
+- **Is this your personal page (username.github.io)?**: Choose **Yes**.
+- **_For all other questions_**: Press Enter to accept the default answers.
 
-### 4. Generate Your Static Website with Pelican
-**Principle from Etter’s Modern Technical Writing**: **Actionable Steps** – Every instruction should lead to a clear and actionable next step.
+This will create the necessary folder structure and configuration files for your Pelican site. Your project directory should now look like this:
 
-To generate the static HTML files for your resume, run the following command in your terminal:
+```perl
+my_project/
+├── content/       # Your source files (Markdown)
+├── output/        # Generated static files
+├── pelicanconf.py # Pelican settings
+└── README.md      # Your project information
+# There may be other files, but don't worry about them.
+```  
+
+### 3. Your Markdown Resume  
+*(Etter’s Principle: Use Lightweight Markup (Chapter 3.1). Etter highlights the superiority of lightweight markup languages like Markdown for documentation, which are easier to write and maintain than XML like HTML)*  
+
+Now, move your `.md` resume file into the `content` folder that was just created by Pelican. For Pelican to process it correctly, add the following metadata at the top of your `.md` file:  
+
+```markdown
+Title: Marvin McLare's Resume  
+Date: 2025-03-06  
+Slug: resume  
+Category: pages  
+Summary: A professional finance manager.  
+
+<!-- your resume goes here -->
+```  
+
+For an example of how to make a nice resume using Markdown, you can check out [my resume in Markdown](content/Resumé.md).  
+
+### 4. Generate Your Static Website with Pelican    
+
+To generate the static HTML files for your resume, run the following command in your terminal in your project directory:
 
 ```bash
 pelican content -o output -s pelicanconf.py
 ```
 
-This command will process your `.md` file, convert it to HTML, and place the output in the `output/` directory.
+This command will process your `.md` file inside the `content/` folder, convert it to HTML, and place the output in the `output/` folder.  
 
-### 5. Push Your Resume to GitHub Pages
-**Principle from Etter’s Modern Technical Writing**: **Clarity** – Ensure the user knows exactly what to do next.
+*Note: You should run this command after you make any change to the content folder, the markdown file, the Pelican configuration file, etc... to update your website static files in `output`. Refer to **step 8**.*  
 
-Since your repository is set up as `your-username.github.io`, you can push directly to the `main` branch of this repository:
+### 5. Preview Locally
 
-- Use the following commands to push the generated files to GitHub Pages:
+To check your site before publishing:
 
-    ```bash
-    ghp-import output -b main
-    git push -f origin main
+```bash
+pelican --listen
+```
+
+Open http://localhost:8000 in your browser to view your webpage. Press `Ctrl C` in the terminal to stop hosting locally.
+
+### 6. Deploy to GitHub Pages  
+
+Now that the web page looks good on your local host, it’s time to push it to GitHub Pages.  
+
+It is a good practice to have 2 branches: `main` and `gh-pages` in your website repository. We will push the content of the website (i.e., the `output` folder) to the `gh-pages` branch, while pushing the source code that generates the website (i.e., the Pelican files in your `project directory`) to the `main` branch.
+
+- **Push to main:**  
+    First, make a `.gitignore` file in your project directory and write the following lines:  
     ```
+    output/
+    __pycache__/
+    ```  
+    This will tell Git not to include the `output` folder (i.e., we only want the source code) and the Python cache files in the `main` branch.  
+    In your project directory, run these commands:  
+    ```bash
+    git add .
+    git commit -m "your commit message"
+    git push -u origin main
+    ```    
 
-This will upload the contents of the `output` folder to the `main` branch of your GitHub repository.
+- **Push to gh-pages:**  
+    ```bash
+    ghp-import output -b gh-pages
+    git push origin gh-pages --force
+    ```
+    This will push the `output` folder to the `gh-pages` branch.  
 
-### 6. View Your Hosted Resume
-After you’ve pushed your changes, you can view your resume live on GitHub Pages. Go to the following URL in your browser:
+*Note: You should run these commands every time you make changes in the corresponding folder to keep your Github repository up-to-date. Refer to **step 8**.*
+
+### 7. View Your Hosted Resume  
+*(Etter’s Principle: Build a Website (Chapter 2.6).
+Etter emphasizes that documentation should be hosted on websites rather than distributed as PDFs. Websites are easy to update while PDFs become outdated in users' hard drives. This guide follows that principle by showing you how to host your Markdown file as a static website using GitHub Pages)*  
+
+After you’ve pushed the static files to the `gh-pages` branch, you can view your resume live on GitHub Pages. Go to the following URL in your browser:  
 
 ```
 https://your-username.github.io/
-```
+```  
+
+Before that, you may need to go to the Settings of your GitHub repository, go to "Pages", and under the "Deploy from a branch" option, change the branch from "main" to "gh-pages".  
 
 Your resume should now be visible to the world!
 
-## Further Resources/Readings
-1. [Pelican Documentation](https://docs.getpelican.com/en/latest/) – Official Pelican docs.
-2. [GitHub Pages Guide](https://pages.github.com/) – A guide to using GitHub Pages for hosting static websites.
-3. [Markdown Guide](https://www.markdownguide.org/) – A comprehensive Markdown tutorial.
-4. [Technical Writing Fundamentals](https://www.amazon.com/Modern-Technical-Writing-Andrew-Etter/dp/194536701X) – A great resource for learning technical writing.
+### 8. Update Your Website 
+*(Etter’s Principle: Publish Frequently (Chapter 2.8).
+Etter emphasizes the importance of frequently updating your documentation to ensure it remains accurate and relevant. This applies to your resume as well - always rebuild and republish after making changes.)*  
 
-## FAQ
+Any time you make changes to your website source files, such as editing the Markdown file in the `content` folder or modifying the Pelican configuration, you need to run the following commands to reflect the changes on your hosted website:  
 
-### Why is Markdown better than writing raw HTML?
-Markdown is simpler and more readable compared to raw HTML. It allows for clear, concise formatting without the complexity of HTML tags, making it perfect for writing content like resumes or documentation.
+```bash
+pelican content -o output -s pelicanconf.py
+ghp-import output -b gh-pages
+git push origin gh-pages --force
+```
 
-### I changed the Markdown version of my resume, but why don’t I see the changes when I refresh the website in my browser?
-This is likely because you haven't rebuilt the static site after updating the `.md` file. Run the `pelican content -o output -s pelicanconf.py` command again to regenerate the HTML files, then push them to GitHub Pages with `ghp-import`.
+If you don't see the changes immediately, press `Ctrl + Shift + R` to perform a hard refresh on the page.  
 
-## Credits
-- Written by [Your Name].
-- Special thanks to [Group Members] for peer reviewing this guide.
-- Pelican theme: [Theme Name or Source].
+One fun thing you can do is change the theme of your website. Visit the [Pelican themes repository](https://github.com/getpelican/pelican-themes), download a theme you like, unzip it, and place the theme folder into your project directory. For example, if the theme folder is named `bluegrass`, open `pelicanconf.py` and add this line:
+
+```python
+THEME = "bluegrass"
+```
+
+Then, run the above three commands to update your GitHub Page, and you'll see your website in a new theme!
+
+Additionally, make sure you update your source code in the `main` branch, too:
+```bash
+git add .
+git commit -m "your commit message"
+git push -u origin main
+```
+
+## Further Resources/Readings  
+1. [Pelican Documentation](https://docs.getpelican.com/en/latest/) – Official Pelican docs.  
+2. [GitHub Pages Guide](https://pages.github.com/) – A guide to using GitHub Pages for hosting static websites.  
+3. [Markdown Guide](https://www.markdownguide.org/) – A comprehensive Markdown tutorial. 
+4. [Technical Writing Fundamentals](https://www.amazon.ca/Modern-Technical-Writing-Introduction-Documentation-ebook/dp/B01A2QL9SS) – Etter's book for learning technical writing.  
+
+## FAQ  
+
+### Why is Markdown better than writing raw HTML?  
+Markdown is simpler, more readable, and faster to write compared to raw HTML. It allows for clear, concise formatting without the complexity of HTML tags, making it perfect for writing content like resumes or documentation.  
+
+### I changed the Markdown version of my resume, but why don’t I see the changes when I refresh the website in my browser?  
+This is likely because you haven't rebuilt the static site after updating the `.md` file. Run the `pelican content -o output -s pelicanconf.py` command again to regenerate the HTML files, then push them to GitHub Pages with `ghp-import`. For details, refer to **step 8**.  
+
+## Credits  
+- Written by Minh Do.  
+- Special thanks to Patrick Chauhari for peer reviewing this guide.  
+- Pelican theme: [Blue Grasshopper](https://github.com/gregseth/bluegrasshopper-theme/tree/3f40c24001d6e633c9e5fed28c54cda109acc495). 
