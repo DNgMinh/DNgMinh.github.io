@@ -1,10 +1,17 @@
-Title: Site Web de Minh
+Title: About
 Date: 2025-03-06
-Category: Blog
+Category: pages
+Slug: about
+Summary: Learn more about us.
+
+
+<!-- Title: Resumé de Minh
+Date: 2025-03-06
+Category: pages
 Tags: pelican, site statique, github pages
 Slug: mon-premier-article
 Author: Minh Do
-Summary: Ceci est mon premier article utilisant Pelican.
+Summary: Ceci est mon premier article utilisant Pelican. -->
 
 
 # Minh Do
