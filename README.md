@@ -1,11 +1,13 @@
 # Hosting Your Markdown File on GitHub Pages Using Pelican
 
 ## Purpose
-This README provides instructions on how to take your Markdown file (e.g., your resume) and host it on GitHub Pages using Pelican. I've successfully hosted my resume on [my GitHub Page](https://dngminh.github.io/), and you can view the source code at [my GitHub repository](https://github.com/DNgMinh/DNgMinh.github.io).
+This README provides instructions on how to take your Markdown file (e.g., your resume) and host it on GitHub Pages using Pelican. I've successfully hosted my resume on [my GitHub Page](https://dngminh.github.io/), and you can view the source code at [my GitHub repository](https://github.com/DNgMinh/DNgMinh.github.io).  
+
+*Note: This instruction is for Windows*
 
 ## Prerequisites
 Before you can host your resume, make sure you have the following resources ready. For Git and Python, follow the installation guides on the official websites.
-1. **Git** - A version control system to track your changes and upload to GitHub. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+1. **Git** - A version control system to track your changes and upload to GitHub. [Install Git](https://git-scm.com/downloads/win)
 2. **Python** - Pelican is a Python-based static site generator. [Install Python](https://www.python.org/downloads/)
 3. **Pelican** - A tool to generate static HTML files from your Markdown resume.  
    To install Pelican, run the following command in your terminal:
@@ -22,7 +24,7 @@ Before you can host your resume, make sure you have the following resources read
 ## Instructions
 
 ### 1. Set Up Your GitHub Repository 
-*(Etter’s Principle: Help Others Write (Chapter 2.7). Etter emphasizes the importance of making it easy for others to contribute to documentation. By hosting your project on GitHub and using Git for version control, you create a collaborative environment where other people like me can view and contribute to your project)*
+*(Etter’s Principle: Help Others Write (Chapter 2.7). Etter emphasizes the importance of making it easy for others to contribute to documentation. By putting your source code on GitHub, you create a collaborative environment where other people like me can view and contribute to your project)*
 
 - **Create a GitHub Repository**:
     - Go to [GitHub](https://github.com/).
@@ -39,11 +41,10 @@ Before you can host your resume, make sure you have the following resources read
     ```
     Replace `your-username` with your actual GitHub username.   
 
-
 ### 2. Use `pelican-quickstart` to Create Your Pelican Site
 *(Etter’s Principle: Make Static Websites (Chapter 3.4). Etter advocates for static websites because they are fast, secure, and portable. Although you could manually create a simple static website, he recommends using a static site generator like Pelican)*
 
-In your terminal, `cd` to the directory you just cloned from the GitHub repository (we'll call this your **_project directory_**), then run the following command:
+In your terminal, `cd` to the directory you just cloned from the GitHub repository (referred to as your **_project directory_**), then run the following command:
 
 ```bash
 pelican-quickstart
@@ -89,7 +90,7 @@ For an example of how to make a nice resume using Markdown, you can check out [m
 
 ### 4. Generate Your Static Website with Pelican    
 
-To generate the static HTML files for your resume, run the following command in your terminal in your project directory:
+Run the following command in your terminal in your project directory:
 
 ```bash
 pelican content -o output -s pelicanconf.py
