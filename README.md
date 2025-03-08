@@ -86,7 +86,7 @@ Summary: A professional finance manager.
 <!-- your resume goes here -->
 ```  
 
-For an example of how to make a nice resume using Markdown, you can check out [my resume in Markdown](content/Resumé.md).  
+For an example of how to make a nice resume using Markdown, you can check out [my resume in Markdown](https://github.com/DNgMinh/DNgMinh.github.io/blob/main/content/Resum%C3%A9.md?plain=1).  
 
 ### 4. Generate Your Static Website with Pelican    
 
