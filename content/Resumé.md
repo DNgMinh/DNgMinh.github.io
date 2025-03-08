@@ -11,6 +11,7 @@ Summary: Ceci est mon premier article utilisant Pelican.
 **Email :** dom1@myumanitoba.ca  
 **Téléphone :** 204 228 7018  
 **Github :** [DNgMinh](https://github.com/DNgMinh)    
+**LinkedIn** : [Nghiem Minh Do](https://www.linkedin.com/in/nghiem-minh-do-39b901259/)     
 
 ---
 
