@@ -2,7 +2,8 @@ AUTHOR = 'Minh Do'
 SITENAME = "Minh's web site"
 SITEURL = ""
 
-THEME = "bluegrass"
+# THEME = "bluegrass"
+THEME = "blue-penguin-dark"
 
 PATH = "content"
 
