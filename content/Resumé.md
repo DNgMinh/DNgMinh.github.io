@@ -4,69 +4,114 @@ Category: pages
 Tags: pelican, site statique, github pages
 Slug: mon-premier-article
 Author: Minh Do
-Summary: Ceci est mon premier article utilisant Pelican.
+Summary: Professional resume of Minh Do - Computer Science student at University of Manitoba.
 
 # Minh Do
 
-**Email :** dom1@myumanitoba.ca  
-**Téléphone :** 204 228 7018  
-**Github :** [DNgMinh](https://github.com/DNgMinh)    
-**LinkedIn** : [Nghiem Minh Do](https://www.linkedin.com/in/nghiem-minh-do-39b901259/)     
+**Location:** Winnipeg, MB  
+**Email:** dom1@myumanitoba.ca  
+**Phone:** (+1) 204 228 7018  
+**GitHub:** [DNgMinh](https://github.com/DNgMinh)  
+**LinkedIn:** [Nghiem Minh Do](https://www.linkedin.com/in/nghiem-minh-do-39b901259/)
 
 ---
 
-## Objectif
-Je suis un étudiant en informatique à l'Université du Manitoba avec de solides compétences en logique et en résolution de problèmes. J'ai une passion pour relever des défis et découvrir des solutions innovantes. Je cherche mon premier poste en informatique afin d'appliquer mes compétences et d'acquérir une expérience pratique dans le domaine.      
+## Education
+
+**University of Manitoba**  
+B.C.Sc. Computer Science Honours Co-op  
+Sep 2023 - Present  
+GPA: 3.87/4.50 | International Undergraduate Student Scholarship
 
 ---
 
-## Éducation
+## Technical Skills
 
-**Université du Manitoba**  
-_B.C.SC. HONNEURS EN INFORMATIQUE_   
-09/2023 - Présent  
-GPA : 4.0/4.5  
-Cours pertinents : Outils et techniques en informatique, Structures de données et algorithmes, Pratiques de programmation.  
-
-**Université des Sciences et Technologies de Hanoï**  
-_B.SC. INFORMATIQUE_     
-09/2021 - 08/2023  
-GPA : 3.33/4  
-Cours pertinents : Introduction à l'informatique, Programmation orientée objet.
+- **Languages:** Python, Java, C, C++, C#, JavaScript, TypeScript
+- **Tools & Technologies:** Git, SQL, RESTful APIs, ASP.NET, Docker, CI/CD, Google Cloud, Azure, Android SDK
+- **AI & ML:** Transformer, ViT, CNN, ResNet, LSTM, RNN, RAG, Fine-tuning, Self-Supervised Learning, PyTorch, LangChain, XGBoost
 
 ---
 
-## Compétences
+## Experience
 
-- **Langages de programmation** : Java, C#, C++, Python, JavaScript
-- **Outils et technologies** : Git, Docker, SQL, API RESTful, serveurs de machines virtuelles
-- **Langues** : Anglais, Vietnamien, Français.  
+**University of Manitoba** | Jan 2026 - Present  
+*Computer Science Grader - COMP 2080: Algorithms & DS, COMP 1020: Introduction to CS 2*
+- Evaluated assignments and exams; maintained consistent grading standards and met all assessment deadlines
 
----
+**Linagora** | Jul - Sep 2025  
+*Software Developer Intern*
+- Developed frontend features for Twake Calendar, including UI updates and enhancements using TypeScript
+- Collaborated with the AI team to integrate Vietnamese language support into the company's LLM-powered chatbot
+- Participated in cross-team meetings (Java, JavaScript, DevOps, QA, Flutter) to understand open-source product development workflows
 
-## Projets
+**Science Rendezvous - University of Manitoba** | May 2025  
+*Volunteer School Group Guide*
+- Guided school groups between shows and exhibitions as part of the university's annual science outreach event
 
-[**AURORA SCHEDULER**](https://github.com/DNgMinh/Aurora_project)   
-Un site web public qui contribue à la communauté de l'UofM en aidant les étudiants à choisir leurs sections de cours et à planifier leur inscription plus facilement. Il a eu plusieurs centaines d'utilisateurs depuis son lancement.
-
-**CONSEILLER ACADÉMIQUE IA**  
-Une application d'intelligence artificielle agissant comme conseiller académique, utilisant les données des pages web de l'UofM pour répondre aux questions sur les exigences des cours, les inscriptions, et plus encore.  
-
-**APPLICATION WEB FULL STACK**  
-Une application web full stack simulant la gestion des données des employés à des fins éducatives, en mettant l'accent sur le développement front-end, back-end et base de données.    
-
----        
-
-## Certifications et Récompenses
-
-- BOURSE INTERNATIONALE POUR ÉTUDIANTS DE PREMIER CYCLE - UofM
-- CERTIFICAT D'ACHÈVEMENT DÉVELOPPEMENT WEB FULL STACK - MISA CORP.   
+**Private Tutor** | Jan - August 2023  
+*Math Tutor for High School Students*
+- Tutored 2 senior high school students in mathematics one-on-one, helping both successfully graduate with strong academic results
 
 ---
 
-## Centres d'intérêt
+## Publications
 
-- Guitare
-- Cuisine
+Duc N. Do, Minh N. Do, et al. "Domain-Adapted Fine-Tuning of ECG Foundation Models for Multi-Label Structural Heart Disease Screening." Proceedings of the 39th Canadian Conference on Artificial Intelligence (CAIAC 2026), Burnaby, BC, Canada, May 2026 | Preprint
+
+---
+
+## Published Apps
+
+**[Aurora Scheduler](https://github.com/DNgMinh/Aurora_project)** | Hundreds of Users | 2024  
+*Python, Flask, Google Cloud*
+- Built a web app that optimizes student class schedules via a backtracking algorithm with real-time data retrieval from the university registration system API; deployed on Google Cloud
+- Shared on Reddit; adopted by hundreds of U of M students and staff, saving significant time on course scheduling and selection
+
+---
+
+## Projects
+
+**ECG Foundation Model Adaptation for Structural Heart Disease Screening** | 2026  
+*Research Co-author | PyTorch, ECG-FM, ResNet1D, Self-Supervised Learning*
+- Implemented a 1D ResNet baseline from scratch on raw 12-lead ECG waveforms, adapting ResNet-18 with temporal convolutions across 12 input channels for multi-label structural heart disease classification
+- Built a transfer learning baseline using a frozen ECG-FM encoder with a supervised multi-label MLP head over 100,000 ECG-echocardiogram pairs, establishing a linear probe benchmark for downstream comparison
+
+**Spatiotemporal Disease Forecasting - RAConv Model** | 2026  
+*Python, PyTorch, 3D CNN, ConvLSTM, Attention Mechanism*
+- Implemented a deep learning pipeline combining 3D CNN (ResBlocks) and ConvLSTM with Attention Mechanism for multi-step epidemiology forecasting
+- Built a synthetic SEIR-based dataset and conducted training, evaluation, and ablation studies
+
+**[ExerGen - Android Workout Application](https://github.com/DNgMinh/ExerGen)** | 2026  
+*Android SDK, Java, SQLite, JUnit, Mockito, Espresso*
+- Built a complete Android app that generates personalized interval workouts based on equipment and muscle groups, with live session tracking, history persistence, and an analytics dashboard
+- Implemented clean architecture with layered design (presentation/business/persistence), SQLite persistence, and a comprehensive testing suite (JUnit, Mockito, Espresso)
+
+**[University of Manitoba Academic Advisor Chatbot](https://github.com/DNgMinh)** | 2025  
+*Python, LangChain, Gemini API, RAG, SQL, Ngrok*
+- Developed an AI-powered chatbot using a RAG pipeline to answer questions about course requirements, registration, and university policy from U of M web pages
+- Integrated Gemini, LangChain, SQL, and Ngrok with automated data ingestion for up-to-date responses
+
+**[World Cup Database System](https://github.com/DNgMinh)** | 2025  
+*Python, SQL, Database Design, Security*
+- Designed and implemented a relational database with schema normalization (1NF-3NF) and a Python CLI with SQL injection prevention
+- Preprocessed and loaded raw data, ensuring referential integrity and data consistency
+
+**[Employee Data Management System](https://github.com/DNgMinh)** | 2023  
+*ASP.NET, RESTful APIs, MySQL*
+- Developed a full-stack web application for employee data management using ASP.NET with RESTful API design and a MySQL relational database backend
+
+---
+
+## Certifications & Awards
+
+- International Undergraduate Student Scholarship - University of Manitoba
+- Full Stack Web Development Certificate - MISA Corp.
+
+---
+
+## Interests
+
+- Guitar
+- Cooking
 - Basketball
-
